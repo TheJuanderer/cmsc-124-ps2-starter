@@ -10,7 +10,7 @@ later commit.
 R uses type coercion to convert all elements of c(TRUE, 2L, 3.5) to the type double since it has higher in the coercion ladder, producing [1,2,3.5]. The result is a vector with length 3 and no dimensions.
 
 ## P02
-Replace this line with the rule that decides this case.
+This coerces all elements of c(1L, "2", TRUE) to character because character is higher in the coercion ladder than integer and logical. The result is ["1","2","TRUE"], with length 3 and no dimensions.
 
 ## P03
 Replace this line with the rule that decides this case.

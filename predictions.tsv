@@ -1,6 +1,6 @@
 id	value	type	length	dim
 P01	[1,2,3.5]	double	3	none
-P02	TODO	TODO	TODO	TODO
+P02	["1", "2", "TRUE"]	string	3	none
 P03	TODO	TODO	TODO	TODO
 P04	TODO	TODO	TODO	TODO
 P05	TODO	TODO	TODO	TODO
