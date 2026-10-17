@@ -29,7 +29,7 @@ The is.na(x) | x > 10L condition selects elements that are either missing (NA) o
 The factor() function converts the character values into a factor, storing 2 fields inside of it which is factor and levels. The result is factor["low","high","low"] with levels ["low","high","low"], with type string, length 3 since the factor has 3 elements. And also, no dimensions because it is a one-dimensional vector for the 2 fields.
 
 ## P08
-Replace this line with the rule that decides this case.
+The list() function stores elements of different types. The list contains two named fields, scores and label, so its type is a list, and the length is based on how many fields there are in the list which is 2, and dimensions are none.
 
 ## P09
 Replace this line with the rule that decides this case.
