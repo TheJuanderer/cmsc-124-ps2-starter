@@ -20,6 +20,7 @@ Positive indices select elements by position, in the order specified. Selecting 
 
 ## P05
 Replace this line with the rule that decides this case.
+The reason is that the -2L is saying that the second element is not included in the combined vector. Since the selected values are integers, the result has type integer, length 2, and no dimensions.
 
 ## P06
 Replace this line with the rule that decides this case.
