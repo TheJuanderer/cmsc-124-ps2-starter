@@ -16,7 +16,7 @@ This coerces all elements of c(1L, "2", TRUE) to character because character is 
 This recycles the shorter vector c(1L, 2L) to match the length of c(10L, 20L, 30L, 40L) during element-wise addition, producing [11,22,31,42]. The result has length 4 and no dimensions.
 
 ## P04
-Replace this line with the rule that decides this case.
+Positive indices select elements by position, in the order specified. Selecting positions 3 and 1 returns the named values third=9 and first=8, preserving their names. Since the selected values are integers, the result has type integer, length 2, and no dimensions.
 
 ## P05
 Replace this line with the rule that decides this case.
