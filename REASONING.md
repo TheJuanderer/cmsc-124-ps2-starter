@@ -7,7 +7,7 @@ After you run and find a miss, add a short correction entry under that case in a
 later commit.
 
 ## P01
-Replace this line with the rule that decides this case.
+R uses type coercion to convert all elements of c(TRUE, 2L, 3.5) to the type double since it has higher in the coercion ladder, producing [1,2,3.5]. The result is a vector with length 3 and no dimensions.
 
 ## P02
 Replace this line with the rule that decides this case.
