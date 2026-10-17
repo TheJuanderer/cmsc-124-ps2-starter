@@ -13,7 +13,7 @@ R uses type coercion to convert all elements of c(TRUE, 2L, 3.5) to the type dou
 This coerces all elements of c(1L, "2", TRUE) to character because character is higher in the coercion ladder than integer and logical. The result is ["1","2","TRUE"], with length 3 and no dimensions.
 
 ## P03
-Replace this line with the rule that decides this case.
+This recycles the shorter vector c(1L, 2L) to match the length of c(10L, 20L, 30L, 40L) during element-wise addition, producing [11,22,31,42]. The result has length 4 and no dimensions.
 
 ## P04
 Replace this line with the rule that decides this case.
