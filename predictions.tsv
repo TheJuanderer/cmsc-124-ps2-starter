@@ -4,7 +4,7 @@ P02	["1", "2", "TRUE"]	string	3	none
 P03	[10L, 22L, 31L, 42L]	integer	4	none
 P04 [third=9,first=8]    integer    2    none
 P05	[4,9]	integer 2	none
-P06	TODO	TODO	TODO	TODO
+P06	[NA,12]	integer	2	none  
 P07	TODO	TODO	TODO	TODO
 P08	TODO	TODO	TODO	TODO
 P09	TODO	TODO	TODO	TODO
