@@ -38,7 +38,7 @@ The id = 1:2 creates an vector containing 1 and 2, while passed = c(TRUE, FALSE)
 The matrix() function fills a matrix column by column by default, and the + operator recycles the shorter vector to match the matrix's elements and do arithmetic addition. The result has type integer because the target value is also an integer; the length is 6 since there are only 6 elements inside the matrix; and dimensions are 2x3 since we did specify to the nrow to be 2 to be divided throughout the 6 elements.
 
 ## P11
-Replace this line with the rule that decides this case.
+The mean() function returns NA when the input contains a missing value (NA) this is because arithmetic with a missing operand usually produces a missing result. The result is a double vector since the mean() always has a double type for numeric values with decimals. It also has length of 1 and no dimensions.
 
 ## P12
 Replace this line with the rule that decides this case.
