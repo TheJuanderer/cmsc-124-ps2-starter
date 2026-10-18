@@ -35,7 +35,7 @@ The list() function stores elements of different types. The list contains two na
 The id = 1:2 creates an vector containing 1 and 2, while passed = c(TRUE, FALSE) creates a logical vector containing TRUE and FALSE. The result has type list since inside the frames are multiple vector data structures which are related to one another and must have the same number of elements inside them. The length is 2 because it contains two fields inside the frame, and dimensions is 2x2 because it has two rows and two columns.
 
 ## P10
-Replace this line with the rule that decides this case.
+The matrix() function fills a matrix column by column by default, and the + operator recycles the shorter vector to match the matrix's elements and do arithmetic addition. The result has type integer because the target value is also an integer; the length is 6 since there are only 6 elements inside the matrix; and dimensions are 2x3 since we did specify to the nrow to be 2 to be divided throughout the 6 elements.
 
 ## P11
 Replace this line with the rule that decides this case.

@@ -8,7 +8,7 @@ P06	[NA,12]	integer	2	none
 P07	factor["low","high","low"];levels=["low","high"]	character	3	none
 P08	list{scores=[3,5],label="A"}	list	2	none
 P09	data.frame(id=[1,2],passed=[TRUE,FALSE])	list	2	2x2
-P10	TODO	TODO	TODO	TODO
+P10	[11,22,13,24,15,26]	integer	6	2x3
 P11	TODO	TODO	TODO	TODO
 P12	TODO	TODO	TODO	TODO
 P13	TODO	TODO	TODO	TODO
