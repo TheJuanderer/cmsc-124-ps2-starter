@@ -32,7 +32,7 @@ The factor() function converts the character values into a factor, storing 2 fie
 The list() function stores elements of different types. The list contains two named fields, scores and label, so its type is a list, and the length is based on how many fields there are in the list which is 2, and dimensions are none.
 
 ## P09
-Replace this line with the rule that decides this case.
+The id = 1:2 creates an vector containing 1 and 2, while passed = c(TRUE, FALSE) creates a logical vector containing TRUE and FALSE. The result has type list since inside the frames are multiple vector data structures which are related to one another and must have the same number of elements inside them. The length is 2 because it contains two fields inside the frame, and dimensions is 2x2 because it has two rows and two columns.
 
 ## P10
 Replace this line with the rule that decides this case.
