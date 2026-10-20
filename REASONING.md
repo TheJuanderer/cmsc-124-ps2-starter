@@ -19,7 +19,6 @@ This recycles the shorter vector c(1L, 2L) to match the length of c(10L, 20L, 30
 Positive indices select elements by position, in the order specified. Selecting positions 3 and 1 returns the named values third=9 and first=8, preserving their names. Since the selected values are integers, the result has type integer, length 2, and no dimensions.
 
 ## P05
-Replace this line with the rule that decides this case.
 The reason is that the -2L is saying that the second element is not included in the combined vector. Since the selected values are integers, the result has type integer, length 2, and no dimensions.
 
 ## P06
@@ -41,16 +40,24 @@ The matrix() function fills a matrix column by column by default, and the + oper
 The mean() function returns NA when the input contains a missing value (NA) this is because arithmetic with a missing operand usually produces a missing result. The result is a double vector since the mean() always has a double type for numeric values with decimals. It also has length of 1 and no dimensions.
 
 ## P12
-Replace this line with the rule that decides this case.
+mean() takes the average of the given numbers and like in P11, returns NA if there is a missing value.
+However, if we have na.rm = TRUE, any instance of NA is removed from the calculation of the mean().
+Which normally, NA = 0, when the mean function is executed, with na.rm = TRUE, NA is completely ignored.
+Length is 1 because of mean = 8+10/2 = 9, dim = none because no defined dimensions and the default is none.
 
 ## P13
-Replace this line with the rule that decides this case.
+Curly braces in R is a block, with sequentially executed statements if there are any. More importantly,
+these blocks take the value of the last operation in the statement which in our case is x, which simply just
+prints out the value of x. Since x was from 1:3 at first, sequentially (1,2,3), and the 2nd index of x was changed
+to 2.5. It follows that the last print of x would be (1,2.5,3)
 
 ## P14
-Replace this line with the rule that decides this case.
+Similar to P13, the final operation is the value, in the second line we have an ifelse statement that converts the score, if it is NA to 0, otherwise multiply it by 2. Since is.na is a logical operator, it is recycled for all members of scores and the final result is assigned to adjusted.
+the result here is (14,0,24,8). Next, another round of recycling where for every member of adjusted, compare it to 15, if greater, make it 15.  
 
 ## P15
-Replace this line with the rule that decides this case.
+An array is initiated containing the sequence 1 to 8, with the dimensions of 2L x 2L x 2L, a 3D array. From previous encounters with 3D arrays, the first two correspond to the rows and columns, whereas the latter is the number of "slices" or third dimension. In R, when we initiate data to an array, if it lacks in length to fill up the array, it is recycled and attached end-to-end like plenty of other operations in this language. When we look at a 2x2x2 array, we get 4 spaces per slice, [1-2,1-2] x2. Coincidentally, 1:8 takes up 8 spaces, perfect for the 4 spaces per slice. To arrange this in a flat 1D line like the command line, according to the examples in 5.1, we do 
+slice1, slice2
 
 ## P16
-Replace this line with the rule that decides this case.
+Getting the index 0 of a sequence of numbers regardless of the data type should probably return the equivalent of -1 in other programming languages, since R is 1-indexed. In this case it is fair to assume that NA_integer_ will be the result (got the NA from P06).
