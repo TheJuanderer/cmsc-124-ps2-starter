@@ -61,6 +61,19 @@ the result here is (14,0,24,8). Next, another round of recycling where for every
 ## P15
 An array is initiated containing the sequence 1 to 8, with the dimensions of 2L x 2L x 2L, a 3D array. From previous encounters with 3D arrays, the first two correspond to the rows and columns, whereas the latter is the number of "slices" or third dimension. In R, when we initiate data to an array, if it lacks in length to fill up the array, it is recycled and attached end-to-end like plenty of other operations in this language. When we look at a 2x2x2 array, we get 4 spaces per slice, [1-2,1-2] x2. Coincidentally, 1:8 takes up 8 spaces, perfect for the 4 spaces per slice. To arrange this in a flat 1D line like the command line, according to the examples in 5.1, we do 
 slice1, slice2
+### Correction:
+- I was wrong in representing the flattened value of the array, after trying many combinations of things online, naghirit nalang ko sir kay 
+daw wala gid ko bi may makita nga chakto haha 
+previous attempts: 
+```
+[1,2,3,4],[5,6,7,8]
+[[1,2,3,4],[5,6,7,8]]
+[1,2,3,4][5,6,7,8]
+```
 
 ## P16
 Getting the index 0 of a sequence of numbers regardless of the data type should probably return the equivalent of -1 in other programming languages, since R is 1-indexed. In this case it is fair to assume that NA_integer_ will be the result (got the NA from P06).
+### Correction:
+- In documentations, the regarded way to represent a value grabbed by indexing 0 is dependent on the type, then its zero-length
+so integer(0) for integer, numeric(0) for numeric. I tried the first one but it didn't work so I just emptied the value since its
+technically zero-length then got it right. `[]`
