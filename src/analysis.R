@@ -32,9 +32,7 @@ clean_scores_vector <- function(scores) {
     return_vec <- scores[];
     return_vec[is.na(return_vec)] <- 0
     return_vec <- pmin(2 * return_vec, 20)
-    return return_vec
-
-    stop("TODO: implement clean_scores_vector()")
+    return_vec
 }
 
 # clean_scores_scalar(scores)
@@ -59,7 +57,24 @@ clean_scores_vector <- function(scores) {
 # names attached. Accumulating into a fresh vector with out <- c(out, value)
 # drops them, and the check compares with identical(), which notices.
 clean_scores_scalar <- function(scores) {
-    stop("TODO: implement clean_scores_scalar()")
+    out <- setNames(as.double(scores), names(scores))
+
+    for (i in seq_along(out)) {
+        value <- out[[i]]
+
+        if (is.na(value)) {
+            value <- 0
+        }
+
+        value <- pmin(2 * value, 20)
+        out[[i]] <- value
+        
+    }
+
+
+    out
+
+    
 }
 
 # build_roster(student_names, groups, scores)
