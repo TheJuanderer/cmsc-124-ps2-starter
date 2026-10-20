@@ -66,6 +66,7 @@ clean_scores_scalar <- function(scores) {
             value <- 0
         }
 
+        value <- pmin(2 * value, 20)
         out[[i]] <- value
         
     }
