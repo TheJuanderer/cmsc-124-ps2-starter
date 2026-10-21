@@ -106,7 +106,16 @@ clean_scores_scalar <- function(scores) {
 # order. factor(groups, levels = unique(groups)) keeps first-appearance order.
 # unname() is what strips the names off the two score columns.
 build_roster <- function(student_names, groups, scores) {
-    stop("TODO: implement build_roster()")
+    cleaned <- unname(clean_scores_vector(scores))
+
+    output <-data.frame(name = student_names,
+    group = factor(groups, levels = unique(groups)),
+    raw_score = unname(scores),
+    adjusted_score = cleaned,
+    passed = cleaned >= 12,
+    stringsAsFactors = FALSE )
+    
+    output
 }
 
 # summarize_roster(roster)
@@ -139,5 +148,16 @@ build_roster <- function(student_names, groups, scores) {
 # split() can divide adjusted_score by every factor level. vapply() can then
 # compute one mean for each part and return a named vector with no dimensions.
 summarize_roster <- function(roster) {
-    stop("TODO: implement summarize_roster()")
+    summarized <- list(
+        rows = nrow(roster),
+        missing_raw = sum(is.na(roster$raw_score)),
+        mean_adjusted = mean(roster$adjusted_score, na.rm = TRUE),
+        passed = roster$name[roster$passed],
+        mean_by_group = vapply(split(roster$adjusted_score, roster$group),
+            mean,
+            FUN.VALUE = numeric(1),
+            na.rm = TRUE 
+            )
+        )
+    summarized
 }
