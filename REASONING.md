@@ -14,6 +14,8 @@ This coerces all elements of c(1L, "2", TRUE) to character because character is 
 
 ## P03
 This recycles the shorter vector c(1L, 2L) to match the length of c(10L, 20L, 30L, 40L) during element-wise addition, producing [11,22,31,42]. The result has length 4 and no dimensions.
+### Correction:
+The predicted value should not include the L suffix because the final output represents the integer values without explicitly displaying their type suffix. The values should be [11,22,31,42], not [11L,22L,31L,42L]
 
 ## P04
 Positive indices select elements by position, in the order specified. Selecting positions 3 and 1 returns the named values third=9 and first=8, preserving their names. Since the selected values are integers, the result has type integer, length 2, and no dimensions.
@@ -26,18 +28,24 @@ The is.na(x) | x > 10L condition selects elements that are either missing (NA) o
 
 ## P07
 The factor() function converts the character values into a factor, storing 2 fields inside of it which is factor and levels. The result is factor["low","high","low"] with levels ["low","high","low"], with type character, length 3 since the factor has 3 elements. And also, no dimensions because it is a one-dimensional vector for the 2 fields.
-
-correction:
+### Correction:
 so the values inside of the factor are in integer intead of "character" since the factor levels work in such a way that it turns the different categories into unique integer values
+The predicted value is incorrect because a factor stores its category values internally as integer codes, rather than as character strings. The values low, high, and low is based on the levels [low,high]. Therefore, the corrected value is factor[low,high,low];levels=[low,high]. 
 
 ## P08
 The list() function stores elements of different types. The list contains two named fields, scores and label, so its type is a list, and the length is based on how many fields there are in the list which is 2, and dimensions are none.
+### Correction:
+The label value is a vector from the grader notation
 
 ## P09
 The id = 1:2 creates an vector containing 1 and 2, while passed = c(TRUE, FALSE) creates a logical vector containing TRUE and FALSE. The result has type list since inside the frames are multiple vector data structures which are related to one another and must have the same number of elements inside them. The length is 2 because it contains two fields inside the frame, and dimensions is 2x2 because it has two rows and two columns.
+### Correction:
+the data.frame value should be `data.frame[2x2]{id=[1,2],passed=[TRUE,FALSE]}` which includes the data type, the dimension and the multiple vectors inside as stated in the grader notation
 
 ## P10
 The matrix() function fills a matrix column by column by default, and the + operator recycles the shorter vector to match the matrix's elements and do arithmetic addition. The result has type integer because the target value is also an integer; the length is 6 since there are only 6 elements inside the matrix; and dimensions are 2x3 since we did specify to the nrow to be 2 to be divided throughout the 6 elements.
+### Correction:
+The matrix value should include the type, the dimension and the values in one which is `matrix[2x3](11,22,13,24,15,26)` which is from the grader notation
 
 ## P11
 The mean() function returns NA when the input contains a missing value (NA) this is because arithmetic with a missing operand usually produces a missing result. The result is a double vector since the mean() always has a double type for numeric values with decimals. It also has length of 1 and no dimensions.
