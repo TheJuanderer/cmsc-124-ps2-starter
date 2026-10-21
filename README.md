@@ -1,7 +1,7 @@
 <!--no-pdf-->
 # CMSC 124 Problem Set 2 Starter
 
-### Members: Name (github)
+### Members: 
 - John Benedict Aparicio (erratic-behaviour)
 - Brent Michael Mendoza (TheJuanderer)
 ---
